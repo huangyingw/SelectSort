@@ -2,21 +2,23 @@
 using namespace std;
 template <class Type> class SelectSort
 {
-private:
-	int length;
+	private:
+		int length;
+		ofstream fout; 
 
-public:
-	Type* data;
-	SelectSort<Type>(int len);
-	void Initial();
-	void Sort();
-	void Print();
+	public:
+		Type* data;
+		SelectSort<Type>(int len);
+		void Initial();
+		void Sort();
+		void Print();
 };
 
 template <class Type> SelectSort<Type>::SelectSort(int len)
 {
 	length=len;
 	data=new Type[length];
+	fout.open("output.txt");
 }
 
 template <class Type> void SelectSort<Type>::Initial()
