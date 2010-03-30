@@ -62,5 +62,7 @@ template <class Type> void SelectSort<Type>::Sort()
 			data[k]=data[i];
 			data[i]=temp;
 		}
+		fout<<"Currently the "<<i<<" position->";
+		Print();
 	}
 }
