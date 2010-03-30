@@ -9,6 +9,7 @@ template <class Type> class SelectSort
 	public:
 		Type* data;
 		SelectSort<Type>(int len);
+		~SelectSort<Type>();
 		void Initial();
 		void Sort();
 		void Print();
@@ -20,6 +21,12 @@ template <class Type> SelectSort<Type>::SelectSort(int len)
 	data=new Type[length];
 	fout.open("output.txt");
 }
+
+template <class Type> SelectSort<Type>::~SelectSort()
+{
+	fout.close();
+}
+
 
 template <class Type> void SelectSort<Type>::Initial()
 {
