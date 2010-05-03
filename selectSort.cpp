@@ -1,10 +1,8 @@
-#include "stdafx.h"
 #include<iostream>
 using namespace std;
-#include "SelectSort.h"
+#include "selectSort.h"
 
-
-void main() 
+int main() 
 {
 	SelectSort<int>* selectSort=new SelectSort<int>(8);
 	selectSort->data[0]=8;
@@ -17,4 +15,6 @@ void main()
 	selectSort->data[7]=7;
 	selectSort->Sort();
 	selectSort->Print();
+	return 0;
 }
+

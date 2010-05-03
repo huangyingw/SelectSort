@@ -1,6 +1,6 @@
-run : list.o
-	g++ -o run list.o
-list.o : list.cpp list.h
-	g++ -c list.cpp
+run : selectSort.o
+	g++ -o run selectSort.o
+selectSort.o : selectSort.cpp selectSort.h
+	g++ -c selectSort.cpp
 clean :
-	rm run list.o
+	rm run selectSort.o
