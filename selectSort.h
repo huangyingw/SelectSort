@@ -2,16 +2,16 @@
 using namespace std;
 template <class Type> class SelectSort
 {
-private:
-	int length;
-	ofstream fout; 
-public:
-	Type* data;
-	SelectSort<Type>(int len);
-	~SelectSort<Type>();
-	void Initial();
-	void Sort();
-	void Print();
+	private:
+		int length;
+		ofstream fout; 
+	public:
+		Type* data;
+		SelectSort<Type>(int len);
+		~SelectSort<Type>();
+		void Initial();
+		void Sort();
+		void Print();
 };
 
 template <class Type> SelectSort<Type>::SelectSort(int len)
