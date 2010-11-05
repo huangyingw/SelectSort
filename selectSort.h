@@ -14,7 +14,7 @@ class SelectSort
     void Print();
 };
 
-template <class Type>
+  template <class Type>
 SelectSort<Type>::SelectSort(int len)
 {
   length=len;
@@ -22,13 +22,13 @@ SelectSort<Type>::SelectSort(int len)
   fout.open("output.txt");
 }
 
-template <class Type>
+  template <class Type>
 SelectSort<Type>::~SelectSort()
 {
   fout.close();
 }
 
-template <class Type>
+  template <class Type>
 void SelectSort<Type>::Print()
 {
   for(int i=0;i<length;i++)
@@ -38,7 +38,7 @@ void SelectSort<Type>::Print()
   cout<<endl;
 }
 
-template <class Type>
+  template <class Type>
 void SelectSort<Type>::Sort()
 {
   Type temp;
