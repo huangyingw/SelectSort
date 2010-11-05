@@ -1,6 +1,7 @@
 #include <fstream>
 using namespace std;
-template <class Type> class SelectSort
+template <class Type>
+class SelectSort
 {
   private:
     int length;
@@ -14,24 +15,28 @@ template <class Type> class SelectSort
     void Print();
 };
 
-template <class Type> SelectSort<Type>::SelectSort(int len)
+template <class Type>
+SelectSort<Type>::SelectSort(int len)
 {
   length=len;
   data=new Type[length];
   fout.open("output.txt");
 }
 
-template <class Type> SelectSort<Type>::~SelectSort()
+template <class Type>
+SelectSort<Type>::~SelectSort()
 {
   fout.close();
 }
 
-template <class Type> void SelectSort<Type>::Initial()
+template <class Type>
+void SelectSort<Type>::Initial()
 {
 
 }
 
-template <class Type> void SelectSort<Type>::Print()
+template <class Type>
+void SelectSort<Type>::Print()
 {
   for(int i=0;i<length;i++)
   {
@@ -40,7 +45,8 @@ template <class Type> void SelectSort<Type>::Print()
   cout<<endl;
 }
 
-template <class Type> void SelectSort<Type>::Sort()
+template <class Type>
+void SelectSort<Type>::Sort()
 {
   Type temp;
   for(int i=0;i<length;i++)
