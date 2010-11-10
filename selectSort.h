@@ -55,9 +55,9 @@ void SelectSort<Type>::Sort()
 
     if(k!=i)
     {
-      temp=data[k];
-      data[k]=data[i];
-      data[i]=temp;
+      data[k]^=data[i];
+      data[i]^=data[k];
+      data[k]^=data[i];
     }
   }
 }
