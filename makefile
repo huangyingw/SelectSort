@@ -1,6 +1,3 @@
-run : selectSort.o
-	g++ -o run selectSort.o
-selectSort.o : selectSort.cpp selectSort.h
-	g++ -c selectSort.cpp
-clean :
-	rm run selectSort.o
+OBJECTS = selectSort.exe
+include ../../GNU_makefile_template
+LOCFLAGS = -I../selectSort
