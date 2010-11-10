@@ -13,6 +13,7 @@ int main()
   selectSort->data[5]=4;
   selectSort->data[6]=6;
   selectSort->data[7]=7;
+  selectSort->Print();
   selectSort->Sort();
   selectSort->Print();
   return 0;

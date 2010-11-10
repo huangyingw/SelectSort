@@ -1,4 +1,5 @@
 #include <fstream>
+#include <stdio.h>
 using namespace std;
 template <class Type>
 class SelectSort
@@ -45,6 +46,7 @@ void SelectSort<Type>::Sort()
   for(int i=0;i<length;i++)
   {
     int k=i;
+    // after this process, k is pointing to the smallest one
     for(int j=i+1;j<length;j++)
     {
       if(data[j]<data[k])
@@ -53,11 +55,13 @@ void SelectSort<Type>::Sort()
       }
     }
 
+    printf("swap %d,%d \n",data[i],data[k]);
     if(k!=i)
     {
       data[k]^=data[i];
       data[i]^=data[k];
       data[k]^=data[i];
     }
+    Print();
   }
 }
