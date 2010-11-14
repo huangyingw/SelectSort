@@ -6,7 +6,7 @@ class SelectSort
 {
   private:
     int length;
-    ofstream fout; 
+    ofstream fout;
   public:
     Type* data;
     SelectSort<Type>(int len);
@@ -33,9 +33,7 @@ SelectSort<Type>::~SelectSort()
 void SelectSort<Type>::Print()
 {
   for(int i=0;i<length;i++)
-  {
     cout<<data[i]<<",";
-  }
   cout<<endl;
 }
 
