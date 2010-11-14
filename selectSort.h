@@ -6,11 +6,9 @@ class SelectSort
 {
   private:
     int length;
-    ofstream fout;
   public:
     Type* data;
     SelectSort<Type>(int len);
-    ~SelectSort<Type>();
     void Sort();
     void Print();
 };
@@ -20,13 +18,6 @@ SelectSort<Type>::SelectSort(int len)
 {
   length=len;
   data=new Type[length];
-  fout.open("output.txt");
-}
-
-  template <class Type>
-SelectSort<Type>::~SelectSort()
-{
-  fout.close();
 }
 
   template <class Type>
