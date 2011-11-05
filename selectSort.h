@@ -36,7 +36,7 @@ void SelectSort<Type>::Sort()
     int k=i;
     // after this process, k is pointing to the smallest one
     for(int j=i+1;j<length;j++)
-      if(data[j]<data[k])
+      if(data[k]>data[j])
         k=j;
     if(k!=i)
     {
