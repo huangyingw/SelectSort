@@ -31,7 +31,6 @@ void SelectSort<Type>::Print()
   template <class Type>
 void SelectSort<Type>::Sort()
 {
-  Type temp;
   for(int i=0;i<length;i++)
   {
     int k=i;
@@ -39,14 +38,11 @@ void SelectSort<Type>::Sort()
     for(int j=i+1;j<length;j++)
       if(data[j]<data[k])
         k=j;
-
-    printf("swap %d,%d \n",data[i],data[k]);
     if(k!=i)
     {
       data[k]^=data[i];
       data[i]^=data[k];
       data[k]^=data[i];
     }
-    Print();
   }
 }
