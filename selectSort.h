@@ -31,18 +31,19 @@ void SelectSort<Type>::Print()
   template <class Type>
 void SelectSort<Type>::Sort()
 {
+  int smallIndex=0;
   for(int i=0;i<length;i++)
   {
-    int k=i;
-    // after this process, k is pointing to the smallest one
+    smallIndex=i;
+    // after this process, smallIndex is pointing to the smallest one
     for(int j=i+1;j<length;j++)
-      if(data[k]>data[j])
-        k=j;
-    if(k!=i)
+      if(data[smallIndex]>data[j])
+        smallIndex=j;
+    if(smallIndex!=i)
     {
-      data[k]^=data[i];
-      data[i]^=data[k];
-      data[k]^=data[i];
+      data[smallIndex]^=data[i];
+      data[i]^=data[smallIndex];
+      data[smallIndex]^=data[i];
     }
   }
 }
